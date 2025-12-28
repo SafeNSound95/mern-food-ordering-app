@@ -3,12 +3,15 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 
 import { BrowserRouter as Router } from 'react-router-dom'
+import Auth0ProviderWithNavigate from './auth/Auth0ProviderWithNavigate'
 import AppRoutes from './AppRoutes'
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
       <Router>
-        <AppRoutes/>
+        <Auth0ProviderWithNavigate>
+          <AppRoutes/>
+        </Auth0ProviderWithNavigate>
       </Router>
     </StrictMode>
 )
