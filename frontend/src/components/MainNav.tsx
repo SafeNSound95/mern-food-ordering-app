@@ -6,7 +6,7 @@ const MainNav = () => {
   const { loginWithRedirect, isAuthenticated } = useAuth0();
 
   return (
-    <span className="flex space-x-2 items-center">
+    <>
       {isAuthenticated ? (
         <UsernameMenu />
       ) : (
@@ -18,7 +18,7 @@ const MainNav = () => {
           Log In
         </Button>
       )}
-    </span>
+    </>
   );
 };
 
